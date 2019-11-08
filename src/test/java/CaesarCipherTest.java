@@ -14,7 +14,18 @@ public class CaesarCipherTest {
     }
 
     @Test
+    public void shouldNotBeEmptyString(){
+        assertEquals("",caesar.cipher("",3));
+    }
+
+    @Test
     public void shouldCipherUpperCaseLetter(){
         assertEquals("A",caesar.cipher("A",0));
     }
+
+//    @Test
+//    public void shouldCipherWholeAlphabet(){
+//        String allChars = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
+//        assertEquals("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD",caesar.cipher(allChars,-3));
+//    }
 }
