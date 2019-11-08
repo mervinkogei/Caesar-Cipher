@@ -12,4 +12,9 @@ public class CaesarCipherTest {
         String symbols="1!@#$%^&*(){}[]/";
                 assertEquals(symbols,caesar.cipher(symbols,3));
     }
+
+    @Test
+    public void shouldCipherUpperCaseLetter(){
+        assertEquals("A",caesar.cipher("A",0));
+    }
 }
