@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.util.Scanner;
 
 import static java.lang.Character.isLowerCase;
@@ -10,7 +11,9 @@ public class CaesarCipher {
 
     public String cipher(String message, int encode) {
         // rotate by only the size of the alphabet:
-        System.out.print("Enter your message: ");
+//        Console myConsole = System.console();
+        System.out.println("Enter your encryption message: ");
+        String a = console.nextLine();
         encode %= ALPHABET_SIZE;
         char[] chars = message.toCharArray();
         encrypt(chars, encode);
