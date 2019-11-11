@@ -30,22 +30,28 @@ To pass an encrypted message from one person to another, it is first necessary t
 ## Code Examples
 Encryption code:
 
-`public  String startEncryption(){
-         StringBuilder encrypted= new StringBuilder();
-         for(int i=0;i<sentence.length();i++) {
-             int c=sentence.charAt(i);
-             if(Character.isUpperCase(c)) {
-                 c = c + (theKey % 26);
-                 if( c> 'Z') c = c-26;
+`public String encode()
+     {
+         String encoded = "";
+         String encodedArray[] = mInputText.split("");
+         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+         for (int i = 0; i<encodedArray.length;i++)
+         {
+             if (mInputText.charAt(i) == ' ')
+             {
+                 encoded += " ";
              }
-             else if(Character.isLowerCase(c)) {
-                 c = c + (theKey % 26);
-                 if(c > 'z') c = c - 26;
+             else
+             {
+                 int charPosition = alphabet.indexOf(mInputText.charAt(i));
+                 int key = (mKey + charPosition) % 26;
+                 encoded += alphabet.charAt(key);
              }
-             encrypted.append((char) c);
          }
-         return encrypted.toString();`
-
+         return encoded.toUpperCase();
+     }`
+     
+     
 ## Features
 This application is able to: 
 * Get user input
