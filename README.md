@@ -53,8 +53,8 @@ This application is able to:
 * Decrypt the cipher to original string
 
 ## Known Bugs
-Project is:  _finished_
-* No Bugs
+Project is: `Status`
+* The Quit option `3` in the Selection choice is not working effectively
 
 ## Inspiration
 credits:
