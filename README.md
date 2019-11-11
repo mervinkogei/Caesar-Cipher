@@ -11,9 +11,11 @@
 * [Reference](#Reference)
 * [Author](#Author)
 
-## General info
+## Description
 
-A user is given a list of options which they are allowed to choose from. If the user selects encryption, they are asked to enter the text to be encrypted and the value thy want the letters to be shifted with. Else, if they select decryption they they are required to either choose between the already encrypted text or enter their own encrypted text. They can exit the program when they select exit option. 
+To pass an encrypted message from one person to another, it is first necessary that both parties have the 'key' for the cipher, so that the sender may encrypt it and the receiver may decrypt it. For the caesar cipher, the key is the number of characters to shift the cipher alphabet.
+
+. 
 
 
 ## Technologies
