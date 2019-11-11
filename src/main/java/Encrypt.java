@@ -1,4 +1,5 @@
 public class Encrypt {
+
     private int mKey;
     private String mInputText;
 
@@ -37,7 +38,7 @@ public class Encrypt {
 
     public String encode()
     {
-        String encrypt = "";
+        String encoded = "";
         String encodedArray[] = mInputText.split("");
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         for (int i = 0; i<encodedArray.length;i++)
@@ -56,3 +57,4 @@ public class Encrypt {
         return encoded.toUpperCase();
     }
 }
+
