@@ -8,26 +8,26 @@ public class CaesarCipher {
 
     private static final int ALPHABET_SIZE = 26;
 
-    public String cipher(String message, int rotateBy) {
+    public String cipher(String message, int encode) {
         // rotate by only the size of the alphabet:
-        rotateBy %= ALPHABET_SIZE;
+        encode %= ALPHABET_SIZE;
         char[] chars = message.toCharArray();
-        rotate(chars, rotateBy);
+        rotate(chars, encode);
         return new String(chars);
     }
 
-    private void rotate(char[] chars, int rotateBy) {
+    private void rotate(char[] chars, int encode) {
         for (int i = 0; i < chars.length; ++i) {
             if (isLowerCase(chars[i])) {
-                chars[i] = rotateChar(chars[i], rotateBy, 'a', 'z');
+                chars[i] = rotateChar(chars[i], encode, 'a', 'z');
             } else if (isUpperCase(chars[i])) {
-                chars[i] = rotateChar(chars[i], rotateBy, 'A', 'Z');
+                chars[i] = rotateChar(chars[i], encode, 'A', 'Z');
             }
         }
     }
 
-    private char rotateChar(char c, int rotateBy, char firstChar, char lastChar) {
-        c += rotateBy;
+    private char rotateChar(char c, int encode, char firstChar, char lastChar) {
+        c += encode;
         if (c < firstChar) {
             return (char) (c + ALPHABET_SIZE);
         }
