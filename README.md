@@ -25,7 +25,7 @@ To pass an encrypted message from one person to another, it is first necessary t
 ## Setup
 * Install java preferably jdk 11
 * Setup your IDE .Some great IDEs include Intellij and  netbeans.
-* Clone the repository `https://github.com/mervinkogei/Caesar-Cipher`
+* Clone the repository `github.com/mervinkogei/Caesar-Cipher`
 * Open the IDE in the created directory
 ## Code Examples
 Encryption code:
