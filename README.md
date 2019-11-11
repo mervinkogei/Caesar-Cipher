@@ -51,7 +51,18 @@ Encryption code:
          return encoded.toUpperCase();
      }`
      
-     
+  Decryption code:
+  
+  ` public Decrypt(int key, String inputText) {
+               mKey = key;
+               mInputText = inputText;
+           }
+           public String getInputText() {
+               return mInputText;
+           }
+           public int getKey() {
+               return mKey;
+           }`
 ## Features
 This application is able to: 
 * Get user input
